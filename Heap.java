@@ -2,10 +2,16 @@ import java.lang.Integer;
 import java.util.ArrayList;
 
 class Heap{
-    private ArrayList<Integer> eles;
+    private ArrayList<Integer> eles = new ArrayList<Integer>();
 
     public Heap(){
 
+    }
+
+    public Heap(int[] array){
+        for (int i = 0; i<array.length; i++){
+            add(array[i]);
+        }
     }
 
     public void add(int a){
@@ -25,13 +31,30 @@ class Heap{
         int result = eles.remove(0);
         eles.add(0,eles.remove(eles.size() - 1));
         int idx = 0;
-        while ((2*idx+1<eles.size() && eles.get(idx)>eles.get(2*idx+1)) || (2*idx+2<eles.size() && eles.get(idx)>eles.get(2*idx+2))){
-            if (eles.get(2*idx+1)<eles.get(2*idx+2)){
-                swap(idx,2*idx+1);
-                idx = 2*idx+1;
+        while (true){
+            int left = 2*idx+1;
+            int right = 2*idx+2;
+            if (right<eles.size()){
+                if (eles.get(idx)>eles.get(left) || eles.get(idx)>eles.get(right)){
+                    if (eles.get(left)<eles.get(right)){
+                        swap(idx,left);
+                        idx = left;
+                    }else {
+                        swap(idx, right);
+                        idx = right;
+                    }
+                }else {
+                    break;
+                }
+            }else if (left<eles.size()){
+                if (eles.get(idx)>eles.get(left)){
+                    swap(idx,left);
+                    idx = left;
+                }else {
+                    break;
+                }
             }else {
-                swap(idx,2*idx+2);
-                idx = 2*idx+2;
+                break;
             }
         }
 
