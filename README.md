@@ -4,28 +4,19 @@ datastructure
 Heap vs Stack
 =============
 
-Stack
+In a multi-threaded application, each thread will have its own stack. But, all the different threads will share the heap
 
-very fast access
-don't have to explicitly de-allocate variables
-space is managed efficiently by CPU, memory will not become fragmented
-local variables only
-limit on stack size (OS-dependent)
-variables cannot be resized
+object can be stored on the stack. If you create an object inside a function without using the “new” operator then this will create and store the object on the stack, and not on the heap.
 
-Heap
+Once a function call runs to completion, any data on the stack created specifically for that function call will automatically be deleted. Any data on the heap will remain there until it’s manually deleted by the programmer.
 
-variables can be accessed globally
-no limit on memory size
-(relatively) slower access
-no guaranteed efficient use of space, memory may become fragmented over time as blocks of memory are allocated, then freed
-you must manage memory (you're in charge of allocating and freeing variables)
-variables can be resized
+The stack is set to a fixed size, size of the heap is managed by the operating system
+
+The stack is much faster than the heap
+
 
 Processes vs Threads
 ===================
-
-A process is an executing instance of an application.
 
 1. Threads are easier to create than processes since they
 don't require a separate address space.
