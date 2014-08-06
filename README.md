@@ -47,3 +47,12 @@ bonded during runtime based upon runtime object.
 
 3. Overloaded methods are bonded using static binding while overridden methods are bonded using dynamic binding at
 runtime. Here is an example which will help you to understand both static and dynamic binding in Java.
+
+Generic
+========================
+generic programming is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters.
+
+Permits writing common functions or types that differ only in the set of types on which they operate when used, thus reducing duplication;
+
+Stronger type checks at compile time to ensure type-safty.
+Enabling programmers to implement generic algorithms.
