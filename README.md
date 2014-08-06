@@ -44,3 +44,12 @@ must be taken so that different threads don't step on each other.
 This is really another way of stating #2 above.
 
 5.  A process can consist of multiple threads.
+
+Generic
+========================
+generic programming is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters.
+
+Permits writing common functions or types that differ only in the set of types on which they operate when used, thus reducing duplication;
+
+Stronger type checks at compile time to ensure type-safty.
+Enabling programmers to implement generic algorithms.
