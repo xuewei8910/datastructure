@@ -56,3 +56,21 @@ Permits writing common functions or types that differ only in the set of types o
 
 Stronger type checks at compile time to ensure type-safty.
 Enabling programmers to implement generic algorithms.
+
+Polymorphism
+=====================
+one name, many forms
+
+OOP Principle
+=====================
+Encapsulation
+Hide unnecessary details in our classes and provide a clear and simple interface for working with them.
+
+Inheritance
+Class hierarchies improve code readability and enable the reuse of functionality.
+
+Abstraction
+We will learn how to work through abstractions: to deal with objects considering their important characteristics and ignore all other details.
+
+Polymorphism
+Work in the same manner with different objects, which define a specific implementation of some abstract behavior.
